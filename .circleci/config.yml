@@ -11,4 +11,4 @@ jobs:
       - run: gox -osarch=darwin/amd64 -osarch=linux/amd64 -osarch=windows/amd64 -osarch=linux/arm
       - run: mkdir artifacts && mv ./socks2http_* ./artifacts/
       - store_artifacts:
-          path: ./socks2http_*
+          path: ./artifacts
