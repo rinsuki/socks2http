@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: go get github.com/mitchellh/gox
       - run: dep ensure
-      - run: gox -osarch=darwin/amd64 -osarch=linux/amd64 -osarch=windows/amd64 -osarch=linux/arm
+      - run: gox -osarch=darwin/amd64 -osarch=linux/amd64 -osarch=windows/amd64 -osarch=linux/arm -osarch=linux/arm64
       - run: sudo mkdir /artifacts && sudo mv ./socks2http_* /artifacts
       - store_artifacts:
           path: /artifacts
