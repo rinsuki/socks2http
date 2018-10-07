@@ -12,7 +12,7 @@ import (
 
 func main() {
 	if len(os.Args) < 3 {
-		fmt.Printf("Usage: %s [http proxy listen port] [socks5 host] [socks5 port]", os.Args[0])
+		fmt.Printf("Usage: %s [http proxy listen port] [socks5 host] [socks5 port]\n", os.Args[0])
 		os.Exit(1)
 	}
 	socks5 := os.Args[2] + ":" + os.Args[3]
