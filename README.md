@@ -1,5 +1,7 @@
 # [EXPERIMENTAL] socks2http
 
+[![CircleCI](https://circleci.com/gh/rinsuki/socks2http.svg?style=svg)](https://circleci.com/gh/rinsuki/socks2http)
+
 ```
 [CLIENT]
    | ^
