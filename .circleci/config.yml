@@ -6,7 +6,6 @@ jobs:
     working_directory: /go/src/github.com/rinsuki/socks2http
     steps:
       - checkout
-      - run: go get -u github.com/golang/dep/cmd/dep
       - run: dep ensure
       - run: go build
       - run: ls -l
