@@ -17,7 +17,7 @@ func main() {
 	}
 	socks5 := os.Args[2] + ":" + os.Args[3]
 	os.Setenv("HTTP_PROXY", "socks5://"+socks5)
-	fmt.Print(os.Args)
+	fmt.Println(os.Args)
 	sock, err := proxy.SOCKS5("tcp", socks5, nil, proxy.Direct)
 	if err != nil {
 		fmt.Println("connect to socks5 proxy error", err)
