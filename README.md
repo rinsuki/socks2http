@@ -1,6 +1,6 @@
 # [EXPERIMENTAL] socks2http
 
-[![CircleCI](https://circleci.com/gh/rinsuki/socks2http.svg?style=svg)](https://circleci.com/gh/rinsuki/socks2http)
+[![Build](https://github.com/rinsuki/socks2http/actions/workflows/build.yml/badge.svg)](https://github.com/rinsuki/socks2http/actions/workflows/build.yml)
 
 ```
 [CLIENT]
