@@ -12,7 +12,7 @@ import (
 
 func main() {
 	if len(os.Args) < 3 {
-		fmt.Printf("Usage: %s [http proxy listen port] [socks5 host] [socks5 port]\n", os.Args[0])
+		fmt.Printf("Usage: %s [http proxy listen port] [socks5 host] [socks5 port] [optional: listen host]\n", os.Args[0])
 		os.Exit(1)
 	}
 	socks5 := os.Args[2] + ":" + os.Args[3]
@@ -28,5 +28,9 @@ func main() {
 	proxy.ConnectDial = func(network string, address string) (net.Conn, error) {
 		return sock.Dial(network, address)
 	}
-	http.ListenAndServe("localhost:"+os.Args[1], proxy)
+	host := "localhost"
+	if len(os.Args) > 4 {
+		host = os.Args[4]
+	}
+	http.ListenAndServe(host + ":"+os.Args[1], proxy)
 }
